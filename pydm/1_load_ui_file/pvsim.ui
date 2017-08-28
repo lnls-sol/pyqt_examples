@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>551</width>
+    <height>442</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PV Basics</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>30</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Motor RBV:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>68</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Motor VAL:</string>
+   </property>
+  </widget>
+  <widget class="PyDMLineEdit" name="pydmLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>174</x>
+     <y>64</y>
+     <width>120</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="channel" stdset="0">
+    <string>EX:MOTOR1</string>
+   </property>
+   <property name="showUnits" stdset="0">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>108</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Calc VAL:</string>
+   </property>
+  </widget>
+  <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>495</width>
+     <height>283</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="showXGrid">
+    <bool>true</bool>
+   </property>
+   <property name="showYGrid">
+    <bool>true</bool>
+   </property>
+   <property name="title" stdset="0">
+    <string>Time Plot</string>
+   </property>
+   <property name="showLegend">
+    <bool>true</bool>
+   </property>
+   <property name="curves">
+    <stringlist>
+     <string>{&quot;channel&quot;: &quot;EX:CALC&quot;, &quot;name&quot;: &quot;Calc&quot;, &quot;color&quot;: &quot;white&quot;}</string>
+    </stringlist>
+   </property>
+   <property name="timeSpan">
+    <double>10.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="pydmLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>174</x>
+     <y>106</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>Displays the value from an EPICS PV.</string>
+   </property>
+   <property name="channel">
+    <string>EX:CALC</string>
+   </property>
+   <property name="showUnits" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="precision">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="PyDMLabel">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>30</y>
+     <width>89</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="channel">
+    <string>EX:MOTOR1.RBV</string>
+   </property>
+   <property name="showUnits" stdset="0">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
