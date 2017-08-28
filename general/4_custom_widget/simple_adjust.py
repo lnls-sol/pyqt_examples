@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QFrame, QVBoxLayout, QSizePolicy
 from PyQt5.QtCore import pyqtSignal, pyqtSlot, pyqtProperty
 from PyQt5 import uic, QtCore
