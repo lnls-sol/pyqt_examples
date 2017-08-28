@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>467</width>
+    <height>274</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Move motors</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>30</y>
+     <width>156</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Actual position</string>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="pydmLabel">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>70</y>
+     <width>80</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>Displays the value from an EPICS PV.</string>
+   </property>
+   <property name="channel">
+    <string>ca://EX:MOTOR1.RBV</string>
+   </property>
+   <property name="precision">
+    <number>3</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>26</y>
+     <width>151</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Desired position</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_posX">
+   <property name="geometry">
+    <rect>
+     <x>78</x>
+     <y>66</y>
+     <width>105</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter value</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_posY">
+   <property name="geometry">
+    <rect>
+     <x>78</x>
+     <y>102</y>
+     <width>105</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter value</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_posZ">
+   <property name="geometry">
+    <rect>
+     <x>78</x>
+     <y>138</y>
+     <width>105</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter value</string>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="pydmLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>106</y>
+     <width>80</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>Displays the value from an EPICS PV.</string>
+   </property>
+   <property name="channel">
+    <string>ca://EX:MOTOR2.RBV</string>
+   </property>
+   <property name="precision">
+    <number>3</number>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="pydmLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>144</y>
+     <width>80</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>Displays the value from an EPICS PV.</string>
+   </property>
+   <property name="channel">
+    <string>ca://EX:MOTOR3.RBV</string>
+   </property>
+   <property name="precision">
+    <number>3</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>22</x>
+     <y>70</y>
+     <width>47</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pos X</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>22</x>
+     <y>106</y>
+     <width>47</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pos Y</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>22</x>
+     <y>144</y>
+     <width>47</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pos Z</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>227</x>
+     <y>106</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MOTOR:2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>226</x>
+     <y>70</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MOTOR:1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>227</x>
+     <y>144</y>
+     <width>96</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MOTOR:3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_move">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>22</x>
+     <y>188</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Move motors</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>22</y>
+     <width>17</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
