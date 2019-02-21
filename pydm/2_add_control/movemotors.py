@@ -1,22 +1,13 @@
 #!/usr/bin/python3
-import os, sys
-from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow
-from pydm import PyDMApplication
+from pydm import Display
 from epics import PV
 
-class Positioner(QMainWindow):
-    def __init__(self, parent=None):
-        super(Positioner, self).__init__(parent)
-        ui = 'movemotors.ui'
-        abs_path = os.path.dirname(os.path.realpath(__file__))
-        ui_path = os.path.join(abs_path, ui)
-        uic.loadUi(ui_path, baseinstance=self)
-        self.show()
-
-        self.motor_pv1 = PV('EX:MOTOR1')
-        self.motor_pv2 = PV('EX:MOTOR2')
-        self.motor_pv3 = PV('EX:MOTOR3')
+class Positioner(Display):
+    def __init__(self):
+        super(Positioner, self).__init__(ui_filename='movemotors.ui')
+        self.motor_pv1 = PV('IOC:m1')
+        self.motor_pv2 = PV('IOC:m2')
+        self.motor_pv3 = PV('IOC:m3')
 
         self.lineEdit_posX.textChanged.connect(self.validate_positions)
         self.lineEdit_posY.textChanged.connect(self.validate_positions)
@@ -46,7 +37,3 @@ class Positioner(QMainWindow):
         self.motor_pv2.put(y)
         self.motor_pv3.put(z)
 
-if __name__ == '__main__':
-    app = PyDMApplication()
-    positioner = Positioner()
-    sys.exit(app.exec_())

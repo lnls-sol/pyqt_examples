@@ -47,11 +47,11 @@
    <property name="whatsThis">
     <string>Displays the value from an EPICS PV.</string>
    </property>
-   <property name="channel">
-    <string>ca://EX:MOTOR1.RBV</string>
+   <property name="precision" stdset="0">
+    <number>0</number>
    </property>
-   <property name="precision">
-    <number>3</number>
+   <property name="channel" stdset="0">
+    <string>ca://IOC:m1.RBV</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -127,11 +127,11 @@
    <property name="whatsThis">
     <string>Displays the value from an EPICS PV.</string>
    </property>
-   <property name="channel">
-    <string>ca://EX:MOTOR2.RBV</string>
+   <property name="precision" stdset="0">
+    <number>0</number>
    </property>
-   <property name="precision">
-    <number>3</number>
+   <property name="channel" stdset="0">
+    <string>ca://IOC:m2.RBV</string>
    </property>
   </widget>
   <widget class="PyDMLabel" name="pydmLabel_3">
@@ -149,11 +149,11 @@
    <property name="whatsThis">
     <string>Displays the value from an EPICS PV.</string>
    </property>
-   <property name="channel">
-    <string>ca://EX:MOTOR3.RBV</string>
+   <property name="precision" stdset="0">
+    <number>0</number>
    </property>
-   <property name="precision">
-    <number>3</number>
+   <property name="channel" stdset="0">
+    <string>ca://IOC:m3.RBV</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -205,7 +205,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>MOTOR:2</string>
+    <string>MOTOR 2</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -218,7 +218,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>MOTOR:1</string>
+    <string>MOTOR 1</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -231,7 +231,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>MOTOR:3</string>
+    <string>MOTOR 3</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_move">

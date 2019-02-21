@@ -56,7 +56,7 @@
     <rect>
      <x>174</x>
      <y>64</y>
-     <width>120</width>
+     <width>261</width>
      <height>27</height>
     </rect>
    </property>
@@ -66,11 +66,11 @@
    <property name="whatsThis">
     <string/>
    </property>
-   <property name="channel" stdset="0">
-    <string>EX:MOTOR1</string>
-   </property>
    <property name="showUnits" stdset="0">
     <bool>true</bool>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://IOC:m1.VAL</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -121,7 +121,7 @@
    </property>
    <property name="curves">
     <stringlist>
-     <string>{&quot;channel&quot;: &quot;EX:CALC&quot;, &quot;name&quot;: &quot;Calc&quot;, &quot;color&quot;: &quot;white&quot;}</string>
+     <string>{&quot;channel&quot;: &quot;ca://LNLS:ANEL:corrente&quot;, &quot;name&quot;: &quot;Calc&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10}</string>
     </stringlist>
    </property>
    <property name="timeSpan">
@@ -133,7 +133,7 @@
     <rect>
      <x>174</x>
      <y>106</y>
-     <width>120</width>
+     <width>271</width>
      <height>17</height>
     </rect>
    </property>
@@ -143,14 +143,14 @@
    <property name="whatsThis">
     <string>Displays the value from an EPICS PV.</string>
    </property>
-   <property name="channel">
-    <string>EX:CALC</string>
+   <property name="precision" stdset="0">
+    <number>0</number>
    </property>
    <property name="showUnits" stdset="0">
     <bool>false</bool>
    </property>
-   <property name="precision">
-    <number>0</number>
+   <property name="channel" stdset="0">
+    <string>ca://LNLS:ANEL:corrente</string>
    </property>
   </widget>
   <widget class="PyDMLabel" name="PyDMLabel">
@@ -158,7 +158,7 @@
     <rect>
      <x>172</x>
      <y>30</y>
-     <width>89</width>
+     <width>221</width>
      <height>19</height>
     </rect>
    </property>
@@ -168,19 +168,19 @@
    <property name="whatsThis">
     <string/>
    </property>
-   <property name="channel">
-    <string>EX:MOTOR1.RBV</string>
-   </property>
    <property name="showUnits" stdset="0">
     <bool>true</bool>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://IOC:m1.RBV</string>
    </property>
   </widget>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>PyDMTimePlot</class>
-   <extends>QGraphicsView</extends>
-   <header>pydm.widgets.timeplot</header>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
   </customwidget>
   <customwidget>
    <class>PyDMLineEdit</class>
@@ -188,9 +188,9 @@
    <header>pydm.widgets.line_edit</header>
   </customwidget>
   <customwidget>
-   <class>PyDMLabel</class>
-   <extends>QLabel</extends>
-   <header>pydm.widgets.label</header>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
   </customwidget>
  </customwidgets>
  <resources/>
